@@ -1,0 +1,70 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+button {
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid rgb(51,53,51);
+    background-color: rgb(36,36,35);
+    border-image: initial;
+}
+
+button:hover {
+    background-color: rgb(45, 45, 30);
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+    margin-top: 50px;
+}
+
+.result {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    grid-column: 1 / -1;
+    word-break: break-all;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.before-result {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.current-result {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.clear-btn {
+    grid-column: span 2;
+}
+
+.equal-btn {
+    grid-column: span 2;
+}
+
+.sum {
+    grid-row: span 2 ;
+}
+
